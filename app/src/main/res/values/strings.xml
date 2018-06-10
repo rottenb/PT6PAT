@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">PT6 Power Assurance Trending</string>
+
+    <!-- ENVIRONMENT -->
+    <string name="oat_title">OAT:</string>
+    <string name="oat_hint">10</string>
+    <string name="oat_unit">ºC</string>
+    <string name="pa_title">PA:</string>
+    <string name="pa_hint">-150</string>
+    <string name="pa_unit">ft</string>
+
+    <string name="tq_title">Target Tq:</string>
+    <string name="tq_hint">74.0</string>
+    <string name="percent">%</string>
+    <string name="t5_limit_title">T5 Limit:</string>
+    <string name="t5_hint">650</string>
+    <string name="t5_unit">ºF</string>
+    <string name="n1_limit_title">N1 Limit:</string>
+    <string name="n1_hint">93.5</string>
+
+    <!-- ENGINE PARAMETERS -->
+    <string name="eng_1_title">Eng #1</string>
+    <string name="eng_1_n1_offset">N1 Offset:    -0.4</string>
+    <string name="eng_1_t5_offset">T5 Offset:    -1.0</string>
+
+    <string name="eng_2_title">Eng #2</string>
+    <string name="eng_2_n1_offset">N1 offset:     0.0</string>
+    <string name="eng_2_t5_offset">T5 offset:     0.0</string>
+
+    <string name="n1_indicated_title">Indicated N1:</string>
+    <string name="t5_indicated_title">Indicated T5:</string>
+    <string name="n1_adjusted_title">Adjusted N1:</string>
+    <string name="t5_adjusted_title">Adjusted T5:</string>
+
+    <string name="n1_margin_title">N1 Margin:</string>
+    <string name="t5_margin_title">T5 Margin:</string>
+
+    <!-- BUTTONS -->
+    <string name="clear_all">Clear Settings</string>
+    <string name="set_oat_pa">Set</string>
+</resources>
