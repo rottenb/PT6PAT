@@ -38,6 +38,7 @@
                         android:textStyle="bold"
                         android:text="@string/oat_title"/>
                     <EditText
+                        android:id="@+id/oat_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -46,6 +47,8 @@
                         android:textColor="@color/colorPrimary"
                         android:textStyle="bold"
                         android:hint="@string/oat_hint"
+                        android:imeOptions="actionDone"
+                        android:singleLine="true"
                         android:inputType="numberDecimal"/>
                     <TextView
                         android:layout_width="wrap_content"
@@ -72,6 +75,7 @@
                         android:textStyle="bold"
                         android:text="@string/pa_title"/>
                     <EditText
+                        android:id="@+id/pa_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -81,6 +85,7 @@
                         android:textColor="@color/colorPrimary"
                         android:textStyle="bold"
                         android:hint="@string/pa_hint"
+                        android:imeOptions="actionDone"
                         android:inputType="numberDecimal"/>
                     <TextView
                         android:layout_width="wrap_content"
@@ -114,6 +119,7 @@
                         android:textSize="@dimen/title_size"
                         android:text="@string/tq_title"/>
                     <TextView
+                        android:id="@+id/target_tq"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -146,6 +152,7 @@
                         android:textSize="@dimen/title_size"
                         android:text="@string/n1_limit_title"/>
                     <TextView
+                        android:id="@+id/n1_limit"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -178,6 +185,7 @@
                         android:textSize="@dimen/title_size"
                         android:text="@string/t5_limit_title"/>
                     <TextView
+                        android:id="@+id/t5_limit"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -197,7 +205,6 @@
                         android:textColor="@color/colorPrimary"
                         android:text="@string/oat_unit"/>
                 </LinearLayout>
-
             </LinearLayout>
         </LinearLayout>
 
@@ -320,7 +327,7 @@
 
         <Button
             style="?android:attr/borderlessButtonStyle"
-            android:id="@+id/export_button"
+            android:id="@+id/clear_button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"

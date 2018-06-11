@@ -10,13 +10,13 @@
     <string name="pa_unit">ft</string>
 
     <string name="tq_title">Target Tq:</string>
-    <string name="tq_hint">74.0</string>
+    <string name="tq_hint">00.0</string>
     <string name="percent">%</string>
     <string name="t5_limit_title">T5 Limit:</string>
-    <string name="t5_hint">650</string>
-    <string name="t5_unit">ºF</string>
+    <string name="t5_hint">000</string>
+    <string name="t5_unit">ºC</string>
     <string name="n1_limit_title">N1 Limit:</string>
-    <string name="n1_hint">93.5</string>
+    <string name="n1_hint">00.0</string>
 
     <!-- ENGINE PARAMETERS -->
     <string name="eng_1_title">Eng #1</string>
