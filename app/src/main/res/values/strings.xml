@@ -3,22 +3,29 @@
 
     <!-- ENVIRONMENT -->
     <string name="oat_title">OAT:</string>
-    <string name="oat_hint">10</string>
     <string name="oat_unit">ºC</string>
     <string name="pa_title">PA:</string>
-    <string name="pa_hint">-150</string>
     <string name="pa_unit">ft</string>
 
     <string name="tq_title">Target Tq:</string>
-    <string name="tq_hint">00.0</string>
+    <string name="tq_hint">--.-</string>
     <string name="percent">%</string>
     <string name="t5_limit_title">T5 Limit:</string>
-    <string name="t5_hint">000</string>
+    <string name="t5_hint">---</string>
     <string name="t5_unit">ºC</string>
     <string name="n1_limit_title">N1 Limit:</string>
-    <string name="n1_hint">00.0</string>
+    <string name="n1_hint">--.-</string>
+
+    <!-- EAPS, AC GEN STATUS -->
+    <string name="eaps_label">EAPS:</string>
+    <string name="eaps_hint">ON</string>
+    <string name="ac_label">AC Gen:</string>
+    <string name="ac_hint">OFF</string>
+    <string name="dc_label">DC Gen:</string>
+    <string name="dc_hint">OFF</string>
 
     <!-- ENGINE PARAMETERS -->
+    <string name="eng_serial">S/N PCE36069</string>
     <string name="eng_1_title">Eng #1</string>
     <string name="eng_1_n1_offset">N1 Offset:    -0.4</string>
     <string name="eng_1_t5_offset">T5 Offset:    -1.0</string>
@@ -27,10 +34,15 @@
     <string name="eng_2_n1_offset">N1 offset:     0.0</string>
     <string name="eng_2_t5_offset">T5 offset:     0.0</string>
 
-    <string name="n1_indicated_title">Indicated N1:</string>
-    <string name="t5_indicated_title">Indicated T5:</string>
-    <string name="n1_adjusted_title">Adjusted N1:</string>
-    <string name="t5_adjusted_title">Adjusted T5:</string>
+    <string name="n1_indicated_title">Indct\'d N1:</string>
+    <string name="t5_indicated_title">Indct\'d T5:</string>
+    <string name="n1_adjusted_title">Adjst\'d N1:</string>
+    <string name="t5_adjusted_title">Adjst\'d T5:</string>
+
+    <string name="n1_indicated">Indicated N1:</string>
+    <string name="t5_indicated">Indicated T5:</string>
+    <string name="n1_adjusted">Adjusted N1:</string>
+    <string name="t5_adjusted">Adjusted T5:</string>
 
     <string name="n1_margin_title">N1 Margin:</string>
     <string name="t5_margin_title">T5 Margin:</string>
@@ -38,4 +50,6 @@
     <!-- BUTTONS -->
     <string name="clear_all">Clear Settings</string>
     <string name="set_oat_pa">Set</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
 </resources>

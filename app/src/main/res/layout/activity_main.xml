@@ -36,6 +36,7 @@
                         android:layout_marginStart="5dp"
                         android:textSize="@dimen/label_size"
                         android:textStyle="bold"
+                        android:textColor="@color/colorPrimaryDark"
                         android:text="@string/oat_title"/>
                     <EditText
                         android:id="@+id/oat_text"
@@ -46,10 +47,9 @@
                         android:textSize="@dimen/label_size"
                         android:textColor="@color/colorPrimary"
                         android:textStyle="bold"
-                        android:hint="@string/oat_hint"
                         android:imeOptions="actionDone"
                         android:singleLine="true"
-                        android:inputType="numberDecimal"/>
+                        android:inputType="numberSigned"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -73,6 +73,7 @@
                         android:layout_marginStart="20dp"
                         android:textSize="@dimen/label_size"
                         android:textStyle="bold"
+                        android:textColor="@color/colorPrimaryDark"
                         android:text="@string/pa_title"/>
                     <EditText
                         android:id="@+id/pa_text"
@@ -84,9 +85,8 @@
                         android:textSize="@dimen/label_size"
                         android:textColor="@color/colorPrimary"
                         android:textStyle="bold"
-                        android:hint="@string/pa_hint"
                         android:imeOptions="actionDone"
-                        android:inputType="numberDecimal"/>
+                        android:inputType="numberSigned"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -117,6 +117,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="@dimen/title_size"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimaryDark"
                         android:text="@string/tq_title"/>
                     <TextView
                         android:id="@+id/target_tq"
@@ -148,8 +150,10 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="12dp"
+                        android:layout_marginStart="9dp"
                         android:textSize="@dimen/title_size"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimaryDark"
                         android:text="@string/n1_limit_title"/>
                     <TextView
                         android:id="@+id/n1_limit"
@@ -181,8 +185,10 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="14dp"
+                        android:layout_marginStart="11dp"
                         android:textSize="@dimen/title_size"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimaryDark"
                         android:text="@string/t5_limit_title"/>
                     <TextView
                         android:id="@+id/t5_limit"
@@ -208,6 +214,59 @@
             </LinearLayout>
         </LinearLayout>
 
+        <!-- EAPS, AC Gen status -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/border_grey">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:textSize="@dimen/label_size"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:text="@string/eaps_label"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:textSize="@dimen/label_size"
+                    android:textStyle="bold"
+                    android:textColor="@color/green"
+                    android:text="@string/eaps_hint"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:textSize="@dimen/label_size"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:text="@string/ac_label"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:textSize="@dimen/label_size"
+                    android:textStyle="bold"
+                    android:textColor="@color/red"
+                    android:text="@string/ac_hint"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
 
         <!-- Eng Params -->
         <LinearLayout
@@ -216,11 +275,12 @@
             android:orientation="horizontal">
             <!-- Eng #1 -->
             <LinearLayout
+                android:id="@+id/eng_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:background="@drawable/border_grey"
+                android:background="@drawable/border"
                 android:orientation="vertical">
                 <TextView
                     android:layout_width="match_parent"
@@ -228,7 +288,12 @@
                     android:gravity="center_horizontal"
                     android:textSize="@dimen/eng_label_size"
                     android:textStyle="bold"
+                    android:textColor="@color/colorPrimaryDark"
                     android:text="@string/eng_1_title"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@drawable/horizontal_line"/>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -271,7 +336,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:layout_weight="1"
-            android:background="@drawable/border_grey"
+            android:background="@drawable/border"
             android:orientation="vertical">
             <TextView
                 android:layout_width="match_parent"
@@ -279,7 +344,12 @@
                 android:gravity="center_horizontal"
                 android:textSize="@dimen/eng_label_size"
                 android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
                 android:text="@string/eng_2_title"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@drawable/horizontal_line"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

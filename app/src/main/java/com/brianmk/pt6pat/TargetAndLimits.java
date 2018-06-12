@@ -2,6 +2,8 @@ package com.brianmk.pt6pat;
 
 import android.util.Log;
 
+import java.util.Locale;
+
 public class TargetAndLimits {
     private final static String LOG_TAG = TargetAndLimits.class.getSimpleName();
 
@@ -14,29 +16,47 @@ public class TargetAndLimits {
     private static final double baseT5 = 655;
     private static final double baseN1 = 91.2;
 
-    // Limits increase in 1C steps
-    private static final double oatStepTQ = 1.5;
-    private static final double oatStepT5 = 3.2;
-    private static final double oatStepN1 = 0.16;
-
-    // Limits increase in 100ft steps
-    private static final double paStepTQ = -0.01;
-    private static final double paStepT5 = 0;
-
-
     public TargetAndLimits() {
     }
 
     public double[] getValues(double oat, double pa) {
         double[] chartValues = {0, 0, 0};
 
-        double paOffset = 0.144 + (-1.88e-4 * pa) + (1.44e-7 * (pa * pa));
-        double oatOffset = 72.5 + (-2e-3 * pa);
-        double tqOffset = oatOffset + (paOffset * oat);
+        // This indicates that the current oat or pa values aren't valid
+        if ((oat <= -1000) || (pa <= -1000)) {
+            chartValues[TQ] = -1000;
+            chartValues[T5] = -1000;
+            chartValues[N1] = -1000;
 
-        Log.d(LOG_TAG, "paOffset: " + paOffset + "  oatOffset: " + oatOffset + "  tqOffset: " + tqOffset);
+            return chartValues;
+        }
 
-        chartValues[TQ] = tqOffset;
+        // Target torque
+        double paOffsetFactorTQ = 0.144 + (-1.88e-4 * pa) + (1.44e-7 * (pa*pa)); // trendline (polynomial)
+        double oatBaseTQ = baseTQ - (2e-3 * pa);  // tendline (linear)
+        chartValues[TQ] = oatBaseTQ + (paOffsetFactorTQ * oat);
+
+        // T5 limit
+        double paOffsetFactorT5 = 3.34 + (4e-4 * pa) - (3.2e-7 * (pa*pa)); // trendline (polynomial)
+        double oatBaseT5 = baseT5 + (0.012 * pa) + (8e-6 * (pa*pa)); // trendline (linear)
+        chartValues[T5] = oatBaseT5 + (paOffsetFactorT5 * oat);
+
+        // N1 limit
+        double paOffsetFactorN1 = 0;
+        double oatBaseN1 = baseN1;
+        chartValues[N1] = oatBaseN1 + (paOffsetFactorN1 * oat);
+
+        String logmsg = String.format(Locale.getDefault(),
+                "OAT: %.1f  PA: %.1f\n" +
+                        "paOffsetFactorTQ: %.2f  oatBaseTQ: %.1f  targetTq: %.1f\n" +
+                        "paOffsetFactorT5: %.2f  oatBaseT5: %.0f    limitT5: %.0f\n" +
+                        "paOffsetFactorN1: %.2f  oatBaseN1: %.1f   limitN1: %.1f\n",
+                        oat, pa,
+                        paOffsetFactorTQ, oatBaseTQ, chartValues[TQ],
+                        paOffsetFactorT5, oatBaseT5, chartValues[T5],
+                        paOffsetFactorN1, oatBaseN1, chartValues[N1]);
+        Log.d(LOG_TAG, logmsg);
+
 
         return chartValues;
     }
