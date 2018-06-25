@@ -26,11 +26,11 @@
 
     <!-- ENGINE PARAMETERS -->
     <string name="eng_serial">S/N PCE36069</string>
-    <string name="eng_1_title">Eng #1</string>
+    <string name="eng_1_title">Set Eng #1</string>
     <string name="eng_1_n1_offset">N1 Offset:    -0.4</string>
     <string name="eng_1_t5_offset">T5 Offset:    -1.0</string>
 
-    <string name="eng_2_title">Eng #2</string>
+    <string name="eng_2_title">Set Eng #2</string>
     <string name="eng_2_n1_offset">N1 offset:     0.0</string>
     <string name="eng_2_t5_offset">T5 offset:     0.0</string>
 
@@ -50,6 +50,6 @@
     <!-- BUTTONS -->
     <string name="clear_all">Clear Settings</string>
     <string name="set_oat_pa">Set</string>
-    <string name="ok">Ok</string>
+    <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
 </resources>

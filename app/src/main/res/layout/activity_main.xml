@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/light_grey"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -275,13 +276,23 @@
             android:orientation="horizontal">
             <!-- Eng #1 -->
             <LinearLayout
-                android:id="@+id/eng_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:background="@drawable/border"
                 android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/eng1_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/eng_label_size"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:background="@drawable/border"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:text="@string/eng_1_title"/>
+                <!--
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -290,43 +301,56 @@
                     android:textStyle="bold"
                     android:textColor="@color/colorPrimaryDark"
                     android:text="@string/eng_1_title"/>
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="2dp"
-                    android:background="@drawable/horizontal_line"/>
+                    -->
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/border_grey"
                     android:orientation="vertical">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/eng_1_n1_offset"/>
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/eng_1_n1_offset" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/eng_1_t5_offset"/>
+                        android:layout_marginStart="5dp"
+                        android:text="@string/eng_1_t5_offset" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/title_size"
-                        android:text="@string/n1_indicated_title"/>
+                        android:layout_marginStart="5dp"
+                        android:text="@string/n1_indicated_title"
+                        android:textSize="@dimen/title_size" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/title_size"
-                        android:text="@string/t5_indicated_title"/>
+                        android:layout_marginStart="5dp"
+                        android:text="@string/t5_indicated_title"
+                        android:textSize="@dimen/title_size" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/title_size"
-                        android:text="@string/n1_adjusted_title"/>
+                        android:layout_marginStart="5dp"
+                        android:text="@string/n1_adjusted_title"
+                        android:textSize="@dimen/title_size" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/title_size"
-                        android:text="@string/t5_adjusted_title"/>
+                        android:layout_marginStart="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="@string/t5_adjusted_title"
+                        android:textSize="@dimen/title_size" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -336,8 +360,19 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:layout_weight="1"
-            android:background="@drawable/border"
             android:orientation="vertical">
+
+            <Button
+                android:id="@+id/eng2_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/eng_label_size"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:background="@drawable/border"
+                android:backgroundTint="@color/colorPrimary"
+                android:text="@string/eng_2_title"/>
+                <!--
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -346,41 +381,47 @@
                 android:textStyle="bold"
                 android:textColor="@color/colorPrimaryDark"
                 android:text="@string/eng_2_title"/>
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="2dp"
-                    android:background="@drawable/horizontal_line"/>
+                -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/border_grey"
                 android:orientation="vertical">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="5dp"
                     android:text="@string/eng_2_n1_offset"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
                     android:text="@string/eng_2_t5_offset"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
                     android:textSize="@dimen/title_size"
                     android:text="@string/n1_indicated_title"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
                     android:textSize="@dimen/title_size"
                     android:text="@string/t5_indicated_title"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
                     android:textSize="@dimen/title_size"
                     android:text="@string/n1_adjusted_title"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginStart="5dp"
                     android:textSize="@dimen/title_size"
                     android:text="@string/t5_adjusted_title"/>
             </LinearLayout>
@@ -396,13 +437,15 @@
         android:gravity="center|bottom">
 
         <Button
-            style="?android:attr/borderlessButtonStyle"
             android:id="@+id/clear_button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:backgroundTint="@color/colorPrimary"
             android:background="@drawable/border"
-            android:textColor="@color/dark_grey"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/title_size"
             android:text="@string/clear_all"/>
     </LinearLayout>
 </LinearLayout>

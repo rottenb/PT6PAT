@@ -10,6 +10,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Locale;
 
@@ -73,20 +74,58 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Engine 1 parameter dialog
-        View eng1Params = findViewById(R.id.eng_1);
-        eng1Params.setOnClickListener(new AdapterView.OnClickListener() {
+        Button eng1Button = findViewById(R.id.eng1_button);
+        eng1Button.setOnClickListener(new AdapterView.OnClickListener() {
             @Override
             public void onClick(View view) {
-                double values[] = currentTAL.getValues(OAT, PA);
-                DialogFragment engDialog = new EngineDialog();
+                // If there's no OAT or PA, don't bring up the dialog
+                if ((OAT >=-500) && (PA >= -500)) {
+                    double values[] = currentTAL.getValues(OAT, PA);
+                    DialogFragment engDialog = new EngineDialog();
 
-                Bundle args = new Bundle();
-                args.putDouble("TQ", values[0]);
-                args.putDouble("T5", values[1]);
-                args.putDouble("N1", values[2]);
-                engDialog.setArguments(args);
+                    Bundle args = new Bundle();
+                    args.putString("ENG", "ENG #1");
+                    args.putString("SN", "PCE36069");
+                    args.putString("N1o", "N1 Offset: -0.4");
+                    args.putString("T5o", "T5 Offset: -1.0");
 
-                engDialog.show(getFragmentManager(), null);
+                    args.putDouble("TQ", values[0]);
+                    args.putDouble("T5", values[1]);
+                    args.putDouble("N1", values[2]);
+                    engDialog.setArguments(args);
+
+                    engDialog.show(getFragmentManager(), null);
+                } else {
+                    // Create a toast, complaining
+                    Toast.makeText(getApplicationContext(), "Enter OAT and PA to get calculated values first.", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        // Engine 2 parameter dialog
+        Button eng2Button = findViewById(R.id.eng2_button);
+        eng2Button.setOnClickListener(new AdapterView.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if ((OAT >=-500) && (PA >= -500)) {
+                    double values[] = currentTAL.getValues(OAT, PA);
+                    DialogFragment engDialog = new EngineDialog();
+
+                    Bundle args = new Bundle();
+                    args.putString("ENG", "ENG #2");
+                    args.putString("SN", "PCE36009");
+                    args.putString("N1o", "N1 Offset: 0.0");
+                    args.putString("T5o", "T5 Offset: 0.0");
+
+                    args.putDouble("TQ", values[0]);
+                    args.putDouble("T5", values[1]);
+                    args.putDouble("N1", values[2]);
+                    engDialog.setArguments(args);
+
+                    engDialog.show(getFragmentManager(), null);
+                } else {
+                    Toast.makeText(getApplicationContext(), "Enter OAT and PA to get calculated values first.", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }

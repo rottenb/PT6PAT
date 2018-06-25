@@ -197,21 +197,23 @@
             android:background="@drawable/border_grey"
             android:orientation="vertical">
             <TextView
+                android:id="@+id/engine_pos"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:textSize="@dimen/eng_label_size"
                 android:textStyle="bold"
                 android:textColor="@color/colorPrimaryDark"
-                android:text="@string/eng_1_title"/>
+                android:hint="@string/eng_1_title"/>
             <TextView
+                android:id="@+id/engine_sn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:textSize="@dimen/title_size"
                 android:textStyle="bold"
                 android:textColor="@color/colorPrimaryDark"
-                android:text="@string/eng_serial"/>
+                android:hint="@string/eng_serial"/>
             <!-- Offsets -->
             <LinearLayout
                 android:layout_width="match_parent"
@@ -220,6 +222,7 @@
                 android:gravity="center_horizontal"
                 android:orientation="horizontal">
                 <TextView
+                    android:id="@+id/n1_offset"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -227,8 +230,9 @@
                     android:textSize="@dimen/title_size"
                     android:textStyle="bold"
                     android:textColor="@color/colorPrimaryDark"
-                    android:text="@string/eng_1_n1_offset"/>
+                    android:hint="@string/eng_1_n1_offset"/>
                 <TextView
+                    android:id="@+id/t5_offset"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -236,7 +240,7 @@
                     android:textSize="@dimen/title_size"
                     android:textStyle="bold"
                     android:textColor="@color/colorPrimaryDark"
-                    android:text="@string/eng_1_t5_offset"/>
+                    android:hint="@string/eng_1_t5_offset"/>
             </LinearLayout>
 
             <!-- Indicated -->
@@ -271,8 +275,6 @@
                         android:textSize="@dimen/label_size"
                         android:textStyle="bold"
                         android:textColor="@color/colorPrimary"
-                        android:hint="@string/t5_hint"
-                        android:textColorHint="@color/white"
                         android:inputType="numberDecimal"/>
                     <TextView
                         android:layout_width="wrap_content"
@@ -307,8 +309,6 @@
                     android:textSize="@dimen/label_size"
                     android:textStyle="bold"
                     android:textColor="@color/colorPrimary"
-                    android:textColorHint="@color/white"
-                    android:hint="@string/n1_hint"
                     android:inputType="numberDecimal"/>
                 <TextView
                     android:layout_width="wrap_content"
